@@ -2,7 +2,7 @@ import { startServer } from './src/api/api.js';
 import { startBot } from './src/apps/bot.js';
 import 'dotenv/config';
 
-(async () => {
+const main = async () => {
   try {
     process.stdout.write('\x1Bc');
     await startBot();
@@ -18,4 +18,8 @@ import 'dotenv/config';
 
     console.log(error);
   }
-})();
+};
+
+main().catch((error) => {
+  console.error('Error starting application:', error);
+});

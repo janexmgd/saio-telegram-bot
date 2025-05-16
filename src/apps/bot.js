@@ -5,7 +5,7 @@ import commands from '../commands/index.js';
 
 const TELEGRAM_API = `https://api.telegram.org/bot${process.env.BOT_TOKEN}`;
 const URI = `/webhook/${process.env.BOT_TOKEN}`;
-const SERVER_URL = process.env.VERCEL_URL || 'my-site.vercel.app';
+const SERVER_URL = process.env.VERCEL_URL || 'http://localhost:2999';
 const webhookURL = `https://${SERVER_URL}${URI}`;
 
 if (!process.env.BOT_TOKEN) {
